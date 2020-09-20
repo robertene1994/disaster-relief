@@ -3,11 +3,11 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 
-fs.readFile('dist/index.html', 'utf8', (err, data) => {
-    const searchString = 'GOOGLE_MAPS_API_KEY';
-    const re = new RegExp('^.*' + searchString + '.*$', 'gm');
-    const formatted = data.replace(re, process.env.GOOGLE_MAPS_API_KEY);
+process.env.GOOGLE_MAPS_API_KEY = "axaxa";
+console.log(process.env.GOOGLE_MAPS_API_KEY);
 
+fs.readFile('dist/index.html', 'utf8', (_err, data) => {
+    const formatted = data.replace('GOOGLE_MAPS_API_KEY', process.env.GOOGLE_MAPS_API_KEY);
     fs.writeFile('dist/index.html', formatted, 'utf8', (err) => {
         if (err)
             return console.log(err);
@@ -18,7 +18,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('*', (req, res) => {
+app.get('*', (_req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
