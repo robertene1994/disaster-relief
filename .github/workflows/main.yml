@@ -25,7 +25,6 @@ jobs:
         with:
           find: "GOOGLE_MAPS_API_KEY"
           replace: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-          include: "index.html"
 
       - name: Deploy application to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
