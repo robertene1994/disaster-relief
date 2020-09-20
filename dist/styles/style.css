@@ -1,0 +1,70 @@
+/***************/
+/*** Generic ***/
+/***************/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    background: #fff;
+    color: #000 !important;
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: lighter;
+    width: 100%;
+    height: 100%;
+}
+
+#body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 90%;
+}
+
+#map {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+#control-panel {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+#important-places,
+#routes {
+    margin-top: 1rem !important;
+}
+
+
+/************************/
+/*** Errors Container ***/
+/************************/
+#error-container {
+    border-radius: 5px;
+    display: none;
+    height: auto;
+    max-width: 300px;
+    padding: .5em;
+    pointer-events: none;
+    position: fixed;
+    right: 1.5em;
+    top: 5.5em;
+    word-wrap: normal;
+    z-index: 10;
+}
+
+.error-container-info {
+    background: rgba(91, 192, 222, .95);
+    border: 1px solid rgba(91, 192, 222, .85);
+    box-shadow: 1px 1px 1px rgba(91, 192, 222, .85);
+}
+
+.error-container-error {
+    background: rgba(235, 126, 126, 0.85);
+    border: 1px solid rgba(235, 126, 126, 0.85);
+    box-shadow: 1px 1px 1px rgba(235, 126, 126, 0.85);
+}
+
+.error-container-warn {
+    background: rgba(255, 193, 7, 0.85);
+    border: 1px solid rgba(255, 193, 7, 0.85);
+    box-shadow: 1px 1px 1px rgba(255, 193, 7, 0.85);
+}

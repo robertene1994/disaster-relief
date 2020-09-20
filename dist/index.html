@@ -1,0 +1,182 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DisasterRelief</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+
+<body class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12">
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <i class="fas fa-globe-africa"></i> DisasterRelief
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div id="error-container"></div>
+    <div id="body" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div id="control-panel" class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <div id="natural-disasters">
+                <h4><span class="badge badge-secondary mx-2 mt-2">Catástrofes Naturales</span></h4>
+                <div id="dropdownMenuFlood" class="dropdown m-2">
+                    <button id="dropdownMenuButtonFlood" class="btn btn-primary dropdown-toggle w-100" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                            class="fas fa-umbrella"></i> Inundaciones</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonFlood">
+                        <h6 class="dropdown-header">Zonas de Riesgo (Fluvial)</h6>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fluvial-t-10">
+                                <label class="custom-control-label" for="fluvial-t-10">Últimos 10 Años</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fluvial-t-100">
+                                <label class="custom-control-label" for="fluvial-t-100">Últimos 100 Años</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fluvial-t-500">
+                                <label class="custom-control-label" for="fluvial-t-500">Últimos 500 Años</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header">Zonas de Riesgo (Marina)</h6>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="marina-t-100">
+                                <label class="custom-control-label" for="marina-t-100">Últimos 100 Años</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="marina-t-500">
+                                <label class="custom-control-label" for="marina-t-500">Últimos 500 Años</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dropdownMenuFire" class="dropdown m-2">
+                    <button id="dropdownMenuButtonFire" class="btn btn-danger dropdown-toggle w-100" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fire"></i>
+                        Incendios</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonFire">
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="fire">
+                                <label class="custom-control-label" for="fire">Zonas de Riesgo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dropdownMenuEarthQuake" class="dropdown m-2">
+                    <button id="dropdownMenuButtonEarthQuake" class="btn btn-success dropdown-toggle w-100"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                            class="fas fa-globe"></i> Terremotos</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEarthQuake">
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="earth-quake-t-10">
+                                <label class="custom-control-label" for="earth-quake-t-10">Últimos 10 Días</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="earth-quake-t-30">
+                                <label class="custom-control-label" for="earth-quake-t-30">Últimos 30 Días</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="earth-quake-t-365">
+                                <label class="custom-control-label" for="earth-quake-t-365">Últimos 365 Días</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="earth-quake">
+                                <label class="custom-control-label" for="earth-quake">Zonas de Riesgo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="important-places">
+                <h4><span class="badge badge-secondary mx-2 mt-2">Sitios Importantes</span></h4>
+                <div class="m-2">
+                    <button id="user-location" class="btn btn-success w-100" type="button"><i
+                            class="fas fa-map-marker-alt"></i> Su Ubicación</button>
+                </div>
+                <div id="dropdownMenuEmergencies" class="dropdown m-2">
+                    <button id="dropdownMenuButtonEmergencies" class="btn btn-primary dropdown-toggle w-100"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                            class="fas fa-hospital-symbol"></i> Emergencias</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonEmergencies">
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="hospitals">
+                                <label class="custom-control-label" for="hospitals">Hospitales</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dropdownMenuHospitals" class="dropdown m-2">
+                    <button id="dropdownMenuButtonShelters" class="btn btn-danger dropdown-toggle w-100" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-plus"></i>
+                        Refugios</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonShelters">
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="red-cross">
+                                <label class="custom-control-label" for="red-cross">Cruz Roja</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="flight-areas">
+                                <label class="custom-control-label" for="flight-areas">Zonas Abiertas (Zonas
+                                    Vuelo)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="routes">
+                <h4><span class="badge badge-secondary mx-2 mt-2">Rutas</span></h4>
+                <div class="m-2">
+                    <button id="show-route" class="btn btn-primary w-100" type="button" disabled="true"><i
+                            class="fas fa-route"></i> Mostrar Ruta</button>
+                </div>
+                <div class="m-2">
+                    <button id="clear-route" class="btn btn-danger w-100" type="button" disabled="true"><i
+                            class="fas fa-times"></i> Eliminar Ruta</button>
+                </div>
+            </div>
+        </div>
+        <div id="map" class="col-lg-10 col-md-9 col-sm-8 col-xs-12"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="./scripts/error-handler/error-handler.js"></script>
+    <script type="application/javascript" src="./scripts/data/wms.js"></script>
+    <script type="application/javascript" src="./scripts/model/layer.js"></script>
+    <script type="application/javascript" src="./scripts/model/wms.js"></script>
+    <script type="application/javascript" src="./scripts/model/visualizationSystem.js"></script>
+    <script type="application/javascript" src="./scripts/script.js"></script>
+    <script type="application/javascript" async defer
+        src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&callback=initMap">
+    </script>
+</body>
+
+</html
