@@ -8,7 +8,7 @@ fs.readFile('dist/index.html', 'utf8', (err, data) => {
     const re = new RegExp('^.*' + searchString + '.*$', 'gm');
     const formatted = data.replace(re, process.env.GOOGLE_MAPS_API_KEY);
 
-    fs.writeFile(someFile, formatted, 'utf8', (err) => {
+    fs.writeFile('dist/index.html', formatted, 'utf8', (err) => {
         if (err)
             return console.log(err);
     });
