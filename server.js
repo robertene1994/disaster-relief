@@ -1,7 +1,7 @@
+const fs = require('fs');
 const express = require('express');
 const http = require('http');
 const path = require('path');
-const fs = require('fs');
 
 fs.readFile('dist/index.html', 'utf8', (err, data) => {
     const searchString = 'GOOGLE_MAPS_API_KEY';
