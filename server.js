@@ -3,9 +3,9 @@ const http = require('http');
 const path = require('path');
 
 fs.readFile('dist/index.html', 'utf8', (err, data) => {
-    let searchString = 'GOOGLE_MAPS_API_KEY';
-    let re = new RegExp('^.*' + searchString + '.*$', 'gm');
-    let formatted = data.replace(re, process.env.GOOGLE_MAPS_API_KEY);
+    const searchString = 'GOOGLE_MAPS_API_KEY';
+    const re = new RegExp('^.*' + searchString + '.*$', 'gm');
+    const formatted = data.replace(re, process.env.GOOGLE_MAPS_API_KEY);
 
     fs.writeFile(someFile, formatted, 'utf8', (err) => {
         if (err)
