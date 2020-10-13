@@ -1,7 +1,7 @@
 <h1 align="center">
 	<img src="dist/img/logo.svg?sanitize=true" alt="DisasterRelief" width="200">
 	<br>
-	Disaster Relief 🌐
+	Disaster Relief
 </h1>
 <h4 align="center">
 	<img src="https://forthebadge.com/images/badges/made-with-javascript.svg"/>
