@@ -1,7 +1,8 @@
-name: DevOps (CI/CD) ☁️
+name: DevOps (CD)
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - master
 
@@ -9,8 +10,6 @@ jobs:
   deploy:
     name: Deploy 🚀
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, '-release-')"
-
     steps:
       - name: Repository checkout 🛎️
         uses: actions/checkout@v2
