@@ -11,9 +11,9 @@
 
 ### Simple Web application for predicting natural disasters and escape routes. It can be accessed at [DisasterRelief](https://disaster-relief-web.herokuapp.com).
 
-#### Continuous Integration ☁️
+#### DevOps (CI/CD) ☁
 
-[![CI/CD](<https://github.com/robertene1994/disaster-relief/workflows/DevOps%20(CI/CD)%20%E2%98%81%EF%B8%8F/badge.svg>)](https://github.com/robertene1994/disaster-relief/actions?query=workflow%3A%22DevOps+%28CI%2FCD%29+%E2%98%81%EF%B8%8F%22)
+[![DevOps (CD)](<https://github.com/robertene1994/disaster-relief/workflows/DevOps%20(CD)/badge.svg>)](https://github.com/robertene1994/disaster-relief/actions?query=workflow%3A%22DevOps+%28CD%29%22)
 
 #### Continuous Deployment 🚀
 
